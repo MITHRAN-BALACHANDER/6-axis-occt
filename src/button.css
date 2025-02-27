@@ -7,6 +7,8 @@
     color: white;
     transition: background-color 0.2s ease-in-out;
     outline: none;
+    border: 10px;
+    
   }
   
   .button:hover {

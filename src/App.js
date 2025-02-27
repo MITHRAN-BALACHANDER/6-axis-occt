@@ -6,6 +6,9 @@ import "@google/model-viewer";
 import Start from "./Start";
 import Stop from "./Stop";
 import logo from "./logo.jpg"; 
+import Header from "./header";
+import Simulate from "./Simulate";
+import XYZSliders from "./Sliders";
 
 function App() {
   const [modelUrl, setModelUrl] = useState(null);
@@ -47,35 +50,39 @@ function App() {
       .then(setModelUrl)
       .catch((error) => console.error("Error processing model:", error));
   }, []);
-
+//<img src={logo} alt="Logo" className="logo" style={{ height: "100px" }}/>
   return (
     <div className="App">
-    <header className="App-header">
+      <Header>  </Header>
+      
 
-      <img src={logo} alt="Logo" className="logo"/>
+      <header className="App-header">
+        <div className="content" style={{ display: "flex",  gap: "20px" ,justifyContent: "center", alignItems: "center"}}>
 
-      <div className="content">
-        <div className="start-container">
-          <Start />
-
-          <Stop/>
+        
+         <div className="controls" style={{ flex: 1 ,justifyContent: "center", alignItems: "center",gap:"20px"}}>
+         
+         <div  className="start-container"
+  style={{ display: "flex",justifyContent: "center", alignItems: "center", gap: "20px" }}
+>
+  <Start />
+  <Stop />
+  <Simulate />
+</div>
+<div><XYZSliders/></div>
+          </div>
+          
+          <model-viewer
+            className="App-viewport"
+            style={{ width: "40%", height: "80vh", maxWidth: "1200px", marginLeft: "2rem" }}
+            src={modelUrl}
+            camera-controls
+            auto-rotate
+            ar
+          />
         </div>
-
-        {modelUrl ? (
-         <model-viewer
-  className="App-viewport"
-  style={{ width: "100vw", height: "80vh", maxWidth: "1200px", margin: "auto", display: "block" }}
-  src={modelUrl}
-  camera-controls
-  auto-rotate
-  ar
-/>
-        ) : (
-          <p>Loading...</p>
-        )}  
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
   );
 }
 
