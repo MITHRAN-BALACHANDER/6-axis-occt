@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 25vw;
+  pointer-events: none;
+
+}
+.model-viewer-container {
+  width: 50vw;
+  height: 50vh;
+  display: block;
+  margin: auto;
+}
+
+.logo {
+  width: 100%;      /* Full width */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;   /* Remove extra spacing */
+  object-fit: cover; /* Ensure it fills the space */
+}
+
+.App-header {
+  background-color: hsl(0, 23%, 97%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  font-size: calc(10px + 2vmin);
+  color: rgb(8, 8, 8);
+}
+
+.App-link {
+  color: #b39b00;
+}
+
+.App-viewport {
+  margin-top: 25px;
+  width: 80vw;  /* 80% of the viewport width */
+  height: 80vh; /* 80% of the viewport height */
+  max-width: 800px; /* Limits excessive size on large screens */
+  max-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents scrollbars */
+  border: 2px solid #ccc; /* Optional: Adds a border */
+  border-radius: 10px; /* Optional: Rounds corners */
+}
+.start-container {
+  display: flex;
+  align-items: center; /* Center Start vertically */
+  justify-content: flex-start; /* Align Start to the left */
+  width: 20%; /* Adjust width as needed */
+  padding-left: 20px;
+}
