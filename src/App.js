@@ -57,20 +57,37 @@ function App() {
       
 
       <header className="App-header">
-        <div className="content" style={{ display: "flex",  gap: "20px" ,justifyContent: "center", alignItems: "center"}}>
+        <div className="content" style={{ display: "flex",  gap: "20px" ,justifyContent: "center" }}>
 
         
-         <div className="controls" style={{ flex: 1 ,justifyContent: "center", alignItems: "center",gap:"20px"}}>
-         
-         <div  className="start-container"
-  style={{ display: "flex",justifyContent: "center", alignItems: "center", gap: "20px" }}
->
-  <Start />
-  <Stop />
-  <Simulate />
-</div>
-<div><XYZSliders/></div>
-          </div>
+        <div 
+    className="controls" 
+    style={{ 
+      display: "flex",  
+      flexDirection: "column",  
+      justifyContent: "center", 
+      alignItems: "center",  
+      gap: "20px"
+    }}
+  >
+    <div  
+      className="start-container"
+      style={{ 
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center", 
+        gap: "20px" 
+      }}
+    >
+      <Start />
+      <Stop />
+      <Simulate />
+    </div>
+
+    <div>
+      <XYZSliders />
+    </div>
+    </div>
           
           <model-viewer
             className="App-viewport"

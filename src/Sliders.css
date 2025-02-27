@@ -49,4 +49,26 @@
     border-radius: 50%;
     cursor: pointer;
   }
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between button and slider */
+  }
+  
+  .slider-controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .slider-controls input[type="range"] {
+    width: 150px; /* Adjust width as needed */
+  }
   

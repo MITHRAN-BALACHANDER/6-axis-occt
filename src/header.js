@@ -21,11 +21,14 @@ function Header() {
           <p>
             L&T By-Pass, Chinniyampalayam Post, Coimbatore-641062 | Tel: +91 422 2369900
           </p>
+          <p style={{ fontWeight: "bold" }}>
+            Six Axis Robot
+          </p>
         </div>
         
         <div className="naac">
-          <img src="naac-logo.png" alt="NAAC Accreditation" className="naac-logo" />
-          <p>Accredited with Grade A</p>
+          <img src="naac-logo.jpeg" alt="NAAC Accreditation" className="naac-logo" />
+     
           <h2>2727</h2>
           <p>Counselling Code</p>
         </div>
