@@ -1,7 +1,9 @@
 /* Navbar container */
 .navbar {
-    background-color: rgb(243, 243, 243);
-    padding: 10px;
+ 
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+   
   }
   
   /* Flex container for links */
@@ -13,14 +15,17 @@
   /* Individual nav items */
   .nav-item {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 119, 32);
     font-weight: bold;
     margin: 0 15px;
     transition: color 0.3s ease-in-out;
   }
   
   .nav-item:hover {
-    text-decoration: underline;
-    color: darkblue;
+  
+    background-color: rgb(0, 119, 32);
+   color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 2px;
   }
   

@@ -10,11 +10,11 @@ import Simulate from "../Simulate";
 import XYZSliders from "../Sliders";
 import Navbar from "../navbar/navbar";
 
-const Home = () => {  // ✅ Capitalized component name
+const Home = () => { 
   const [modelUrl, setModelUrl] = useState(null);
 
   useEffect(() => {
-    shapeToUrl("final.glb")
+    shapeToUrl("6-axis.glb")
       .then((glbUrl) => initOpenCascade().then((oc) => ({ oc, glbUrl })))
       .then(({ oc, glbUrl }) => {
         const sphere = new oc.BRepPrimAPI_MakeSphere_1(1);
@@ -40,7 +40,7 @@ const Home = () => {  // ✅ Capitalized component name
         shape = makeCut(shape, [0, 0.25, 1.75], 1.825);
         shape = makeCut(shape, [4.8, 0, 0], 5);
 
-        return shapeToUrl("final.glb");
+        return shapeToUrl("6-axis.glb");
       })
       .then(setModelUrl)
       .catch((error) => console.error("Error processing model:", error));

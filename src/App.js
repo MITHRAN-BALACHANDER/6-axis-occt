@@ -5,17 +5,21 @@ import Navbar from "./navbar/navbar";
 import Home from "./home/Home";
 import Graph from "./Graph/Graph";
 import Settings from "./Setting/settings";
-
+import About from "./about/About";
+import Exit from "./exit/exit";
+import Login from "./login/login";
 function App() {
   return (
     <Router>
       <Header/>
       <Navbar />
       <Routes>
-      <Route path="/" element={<Home />} /> 
+      <Route path="/" element={<Login/>} /> 
         <Route path="/home" element={<Home />} />
         <Route path="/graph" element={<Graph />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/exit" element={<Exit/>} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
     </Router>
