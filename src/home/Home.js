@@ -9,7 +9,7 @@ import Header from "../header";
 import Simulate from "../Simulate";
 import XYZSliders from "../Sliders";
 import Navbar from "../navbar/navbar";
-
+import { LoaderCircle } from "lucide-react";
 const Home = () => { 
   const [modelUrl, setModelUrl] = useState(null);
 
@@ -48,8 +48,6 @@ const Home = () => {
 
   return (
     <div className="App">
-      
-
       <header className="App-header">
         <div className="content" style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
           <div
@@ -81,16 +79,24 @@ const Home = () => {
             </div>
           </div>
 
-          <model-viewer
-            className="App-viewport"
-            style={{ width: "40%", height: "80vh", maxWidth: "1200px", marginLeft: "2rem" }}
-            src={modelUrl}
-            camera-controls
-            auto-rotate
-            ar
-          />
+          {modelUrl ? (
+            <model-viewer
+              className="App-viewport"
+              style={{ width: "40%", height: "80vh", maxWidth: "1200px", marginLeft: "2rem" }}
+              src={modelUrl}
+              camera-controls
+              auto-rotate
+              ar
+            />
+          ) : (
+            <div className="loading">
+              <div className="animat">
+              <LoaderCircle/>
+                </div>
+            </div>
+          )}
         </div>
-      </header>
+     </header>
     </div>
   );
 };

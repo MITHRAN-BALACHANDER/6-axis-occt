@@ -7,12 +7,12 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="nba">
-          <img src="nba-logo.png" alt="NBA Accreditation" className="nba-logo" />
+          <img src={logo} alt="NBA Accreditation" className="nba-logo" />
          
         </div>
         
         <div className="college-info">
-          <img src={logo} alt="Sri Shakthi Logo" className="college-logo" />
+          <br/>
           <h1>SRI SHAKTHI INSTITUTE OF ENGINEERING AND TECHNOLOGY</h1>
          
           <p style={{ fontWeight: "bold" }}>

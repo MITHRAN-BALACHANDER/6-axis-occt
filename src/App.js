@@ -19,7 +19,7 @@ function App() {
         <Route path="/graph" element={<Graph />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
-        <Route path="/exit" element={<Exit/>} />
+        <Route path="/Logout" element={<Login />} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
     </Router>

@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './login.css';   
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === 'admin@siet.ac.in' && password === 'admin') {
             console.log('Login successful');
-            window.location.href = '/home';
+            document.body.style.pointerEvents = "all";
+           // window.location.href = '/home'; 
+            navigate('/home');
+           
         } else {
             console.log('Invalid email or password');
+            document.body.style.pointerEvents = "none";
+
         }
         console.log('Email:', email);
         console.log('Password:', password);
     };
 
     return (
+        <div className='login'>
         <div className="login-box">
             <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <div className="user-box">
                     <label>Email:</label>
                     <br />
@@ -42,6 +49,7 @@ const Login = () => {
                 </div>
                 <button type="submit" className='button'>Login</button>
             </form>
+        </div>
         </div>
     );
 };

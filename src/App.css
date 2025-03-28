@@ -1,5 +1,36 @@
+.body{
+  pointer-events: auto;
+}
 .App {
  background-color: white; 
+ pointer-events: auto;
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.803); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.animat {
+  animation: spin 1s linear infinite;
+  position: fixed;
+  
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .App-logo {
