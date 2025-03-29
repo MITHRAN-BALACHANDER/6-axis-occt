@@ -5,7 +5,7 @@ import initOpenCascade from "opencascade.js";
 import "@google/model-viewer";
 import Start from "../Start";
 import Stop from "../Stop";
-import Header from "../header";
+
 import Simulate from "../Simulate";
 import XYZSliders from "../Sliders";
 import Navbar from "../navbar/navbar";
