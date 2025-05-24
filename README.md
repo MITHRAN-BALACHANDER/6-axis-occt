@@ -1,4 +1,4 @@
-# Project Title: 3D Model Viewer and Simulator
+# Project Title:  Robotics (3D Model Viewer and Simulator)
 
 This project is a web-based 3D model viewer and simulator, with potential applications in robotics, CAD, and other fields requiring 3D visualization. It leverages the power of React for the user interface, OpenCascade.js for robust CAD model handling, and Google Model Viewer for seamless 3D rendering in the browser.
 
